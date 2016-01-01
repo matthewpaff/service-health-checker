@@ -1,0 +1,1 @@
+{"description": "reject zero consecutive-failure thresholds", "expected_error": true, "id": "health-0000", "input": {"failure_threshold": 0, "probes": []}}
