@@ -1,0 +1,8 @@
+{
+  "probes": [
+    true,
+    false,
+    false
+  ],
+  "failure_threshold": 2
+}
