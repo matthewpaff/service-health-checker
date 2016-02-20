@@ -40,3 +40,4 @@
 {"description": "become ready exactly at the consecutive-success threshold", "expected": {"failure_streak": 0, "ready": true, "states": ["unready", "unready", "unready", "ready"], "success_streak": 4}, "id": "health-0039", "input": {"probes": [true, true, true, true], "success_threshold": 4}}
 {"description": "reject zero consecutive-failure thresholds", "expected_error": true, "id": "health-0040", "input": {"failure_threshold": 0, "probes": []}}
 {"description": "reject booleans as success thresholds", "expected_error": true, "id": "health-0041", "input": {"probes": [], "success_threshold": true}}
+{"description": "reject non-boolean probe outcomes", "expected_error": true, "id": "health-0042", "input": {"probes": ["ok"]}}
