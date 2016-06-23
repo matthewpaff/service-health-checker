@@ -159,3 +159,4 @@
 {"description": "preserve initial readiness when no probes are supplied", "expected": {"failure_streak": 0, "ready": false, "states": [], "success_streak": 0}, "id": "health-0158", "input": {"initial_ready": false, "probes": []}}
 {"description": "become ready exactly at the consecutive-success threshold", "expected": {"failure_streak": 0, "ready": true, "states": ["ready"], "success_streak": 1}, "id": "health-0159", "input": {"probes": [true], "success_threshold": 1}}
 {"description": "reject zero consecutive-failure thresholds", "expected_error": true, "id": "health-0160", "input": {"failure_threshold": 0, "probes": []}}
+{"description": "reject booleans as success thresholds", "expected_error": true, "id": "health-0161", "input": {"probes": [], "success_threshold": true}}
