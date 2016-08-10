@@ -202,3 +202,4 @@
 {"description": "reject booleans as success thresholds", "expected_error": true, "id": "health-0201", "input": {"probes": [], "success_threshold": true}}
 {"description": "reject non-boolean probe outcomes", "expected_error": true, "id": "health-0202", "input": {"probes": ["ok"]}}
 {"description": "reject non-boolean initial readiness", "expected_error": true, "id": "health-0203", "input": {"initial_ready": "yes", "probes": []}}
+{"description": "reject unknown probe-policy fields", "expected_error": true, "id": "health-0204", "input": {"probes": [], "unknown": 204}}
