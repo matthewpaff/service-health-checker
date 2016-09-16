@@ -251,3 +251,4 @@
 {"description": "reject zero consecutive-failure thresholds", "expected_error": true, "id": "health-0250", "input": {"failure_threshold": 0, "probes": []}}
 {"description": "reject booleans as success thresholds", "expected_error": true, "id": "health-0251", "input": {"probes": [], "success_threshold": true}}
 {"description": "reject non-boolean probe outcomes", "expected_error": true, "id": "health-0252", "input": {"probes": ["ok"]}}
+{"description": "reject non-boolean initial readiness", "expected_error": true, "id": "health-0253", "input": {"initial_ready": "yes", "probes": []}}
