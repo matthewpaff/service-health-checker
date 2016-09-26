@@ -394,3 +394,4 @@
 {"description": "reject non-boolean initial readiness", "expected_error": true, "id": "health-0393", "input": {"initial_ready": "yes", "probes": []}}
 {"description": "reject unknown probe-policy fields", "expected_error": true, "id": "health-0394", "input": {"probes": [], "unknown": 394}}
 {"description": "retain readiness until the consecutive-failure limit", "expected": {"failure_streak": 2, "ready": false, "states": ["ready", "ready", "unready"], "success_streak": 0}, "id": "health-0395", "input": {"failure_threshold": 2, "probes": [true, false, false]}}
+{"description": "require consecutive successes after an interrupted recovery", "expected": {"failure_streak": 0, "ready": true, "states": ["unready", "unready", "unready", "ready"], "success_streak": 2}, "id": "health-0396", "input": {"failure_threshold": 1, "probes": [true, false, true, true], "success_threshold": 2}}
