@@ -313,3 +313,4 @@
 {"description": "reject non-boolean probe outcomes", "expected_error": true, "id": "health-0312", "input": {"probes": ["ok"]}}
 {"description": "reject non-boolean initial readiness", "expected_error": true, "id": "health-0313", "input": {"initial_ready": "yes", "probes": []}}
 {"description": "reject unknown probe-policy fields", "expected_error": true, "id": "health-0314", "input": {"probes": [], "unknown": 314}}
+{"description": "retain readiness until the consecutive-failure limit", "expected": {"failure_streak": 2, "ready": false, "states": ["ready", "ready", "unready"], "success_streak": 0}, "id": "health-0315", "input": {"failure_threshold": 2, "probes": [true, false, false]}}
